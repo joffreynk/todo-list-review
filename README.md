@@ -14,7 +14,6 @@ In this TO-DO list, you can add or remove you activities you can block completed
 - webpack
 
 
-
 ## Getting Started
 to lanch this attplication clone it first, after navigate to the folder file and run ***npm i*** after run ***npm start***
 
@@ -32,7 +31,7 @@ npm i webpack webpack-cli webpack-dev-server html-webpack-plugin css-loader styl
 - Twitter: [@joffreynk](https://twitter.com/home)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/joffrey-nkeshimana-15b8aa1b3/)
 
-👤 **Dario**
+
 
 ## 🤝 Contributing
 

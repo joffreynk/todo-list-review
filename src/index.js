@@ -2,6 +2,9 @@ import Todo from './modules/managedata.js';
 import './index.css';
 
 const todo = new Todo();
+const savelocally = () => {
+  localStorage.setItem('todo', JSON.stringify(todo.getTodos()));
+}
 
 const populateData = () => {
   if (localStorage.getItem('todo')) {
@@ -43,7 +46,7 @@ populateData();
 document.addEventListener('click', (event) => {
   if (event.target.classList.contains('checkbox')) {
     todo.complete(Number(event.target.classList[0]));
-    localStorage.setItem('todo', JSON.stringify(todo.getTodos()));
+    savelocally();
     populateData();
   }
 
@@ -54,13 +57,13 @@ document.addEventListener('click', (event) => {
 
   if (event.target.classList.contains('garbage')) {
     todo.removeTodo(Number(event.target.classList[0]));
-    localStorage.setItem('todo', JSON.stringify(todo.getTodos()));
+    savelocally();
     populateData();
   }
 
   if (event.target.classList.contains('clear-button')) {
     todo.clearCompleted();
-    localStorage.setItem('todo', JSON.stringify(todo.getTodos()));
+    savelocally();
     populateData();
   }
 });
@@ -70,13 +73,13 @@ document.addEventListener('keypress', (event) => {
     if (event.target.classList.contains('newtodo')) {
       todo.addTodo(event.target.value);
       event.target.value = '';
-      localStorage.setItem('todo', JSON.stringify(todo.getTodos()));
+      savelocally();
       populateData();
     }
 
     if (event.target.classList.contains('inputfields')) {
       todo.editTodo(Number(event.target.classList[0]), event.target.value);
-      localStorage.setItem('todo', JSON.stringify(todo.getTodos()));
+      savelocally();
       populateData();
     }
   }
