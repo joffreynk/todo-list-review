@@ -27,7 +27,7 @@ class Todo {
 
   removeTodo(index) {
     this.todos = this.todos.filter((singleTodo) => singleTodo.index !== index);
-   this.reOrder()
+    this.reOrder();
   }
 
   editTodo(index, description) {
@@ -41,7 +41,7 @@ class Todo {
 
   clearCompleted() {
     this.setTodos(this.todos.filter((singleTodo) => singleTodo.completed === false));
-    this.reOrder()
+    this.reOrder();
   }
 
   complete(index) {

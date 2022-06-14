@@ -4,7 +4,7 @@ import './index.css';
 const todo = new Todo();
 const savelocally = () => {
   localStorage.setItem('todo', JSON.stringify(todo.getTodos()));
-}
+};
 
 const populateData = () => {
   if (localStorage.getItem('todo')) {
